@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/823db769aa.js" crossorigin="anonymous"></script>
+	<title>About Me</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C58QR0MTE"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-9C58QR0MTE');
+	</script>
+</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+	<!--Skip to Main Content -->
+	<a class = "skip" href="#main">Skip to Main Content</a>
+  
+	<!-- Header is a sematic tag page that aids readability -->
+	<header>
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		<nav>
+			<ul class="nav_links">
+				<!-- Since I am on the index file I added class = action to the link to index. -->
+				<li class="active"><a href = "index.html" >About</a></li>
+				<li><a href = "flags.html">Flags</a></li>
+				<li><a href = "pride.html">Pride</a></li>
+				<li><a href = "resources.html">Resources</a></li>
+				<li><a href = "contact.html">Contact</a></li>
+				<!-- <div class="theme-switch-wrapper">
+					<em>Dark Mode</em>
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+				  	</label>
+				</div> -->
+			</ul>
+		</nav>
+
+		<section class="hero">
+			<div class="hero-inner">
+				<h1>LOVE IS LOVE.</h1>
+				<a href="pride.html" class="button">Learn about Pride<i class="fa-solid fa-arrow-right-long"></i></a>
+			</div>
+		</section>
+
+		<!-- The h1 is a semantic tag that aids accessibility -->
+		<h1 id="main"> Love is Love.</h1>
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main>
+		<div class = "about-info">
+			<!-- <img src = "images/loveislove_logo.png" alt = "Love is Love website logo" width="200px"/> -->
+			<h2 id = 'welcome'>Welcome to the Love is Love page!</h2>
+			<div class = 'bounce'>
+				<img src="images/star.png" alt="star">
+			</div>
+	
+			<p>On this educational website, you can find information about LGBTQ+ flags, Pride's origins, and resources for LGBTQ+ individuals. Now, what does the title of this website, "Love is Love" mean? Love is Love is a phrase used to communicate that love means to love however you want. Falling in love with someone is not about the gender of the person; as long as you are happy with your partner, you deserve to love them.</p>
+	
+			<p>Why was this website created? For individuals that are part of the LGBTQ+ community, their sexual orientation, gender identity, and gender expression have caused people to discriminate against them. Specifically, among LGBTQ+ youth, the challenges they go through due to family members, community members, and peers responding to their sexual orientation or gender identity/expression can cause LGBTQ+ youth to be more at risk for suicide and homelessness. Because of this, representation, equality, and education about the LGBTQ+ community are a must. </p>
+	
+			<p>By generating awareness and educating people about the queer community, "Love is Love" can help drive equality for all, especially for queer youth. </p>	
+		</div>
+	</main>
+	
+	<div class = "countdown-container">
+		<div class = "countdown-style">
+			<h2>Days Until Pride Month</h2>
+			<p id="countdown"></p>
+		</div>
+	</div>
+	
+
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("June 1, 2022 12:00:00").getTime();
+		
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+		
+		  // Get today's date and time
+		  var now = new Date().getTime();
+			
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+			
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		  // Output the result in an element with id="demo"
+		  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s ";
+			
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("countdown").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+	</script>
+	
+	<!-- Footer is a sematic tag page that aids readability -->
+	<footer>
+		<footer-end>
+			<p>Made with love by Alan Yang </p>
+		</footer-end>
+		<div class = "icons">
+			<a href="https://www.linkedin.com/in/yang-alan/" class="fa-brands fa-linkedin" aria-label="Linkedin Button"></a>
+			<a href="https://www.instagram.com/alansgraphics/" class="fa-brands fa-instagram" aria-label="Instagram Button"></a>
+			<a href="https://open.spotify.com/playlist/1tUbye7CzDSrUe9zwl8Azh?si=f34829fa9c324e10" aria-label="Spotify Button" class="fa-brands fa-spotify"></a>
+		</div>
+		
+	</footer>
+
+</body>
+
+</html>
