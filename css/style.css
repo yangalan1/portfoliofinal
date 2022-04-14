@@ -253,7 +253,7 @@ footer-end{
     color: black;
     box-shadow: 8px 8px black;
     padding: 15px 32px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     width: 30vw;
     text-align: center;
     display: inline-block;
@@ -303,7 +303,7 @@ footer-end{
     align-items: center;
 }
 
-.calendar h3{
+.calendar h2{
     font-size: 24px;
     font-weight: 600;
     padding: 15px 32px;
@@ -416,11 +416,12 @@ input[type=submit] {
 
   }
 
-  .flip-card {
+  
+.flip-card {
     background-color: transparent;
-    width: 300px;
     height: 200px;
-  }
+    text-align: center;
+    margin-bottom: 30px;  }
   
   /* This container is needed to position the front and back side */
   .flip-card-inner {
@@ -433,7 +434,7 @@ input[type=submit] {
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
   }
   
@@ -442,7 +443,6 @@ input[type=submit] {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
   
@@ -453,22 +453,61 @@ input[type=submit] {
   
   /* Style the back side */
   .flip-card-back {
-    background-color: #F9F9F9;
-    color: white;
     transform: rotateY(180deg);
-    border: 3px solid black;
-    border-radius: 20px;
+    background-color: #fff5df;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
     width: 100%;
     height: 100%;
   }
+  
 
+.bottom-stuff{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flip-card-front img{
+    padding: none;
+    margin: none;
+}
+
+.flip1{
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 @media screen and (prefers-reduced-motion: reduce){
     .bounce img{
         animation: none;
     }
-}
 
+    .hero_mod{
+        background-attachment: scroll;
+    }
+
+    .flip-card:hover .flip-card-inner{
+        transform: rotateY(0);;
+    }
+
+    /* .flip-card-inner{
+        animation: none;
+    }
+
+    .flip-card-front {
+        flex-direction: column;
+    }
+
+    .flip-card-back > p{
+        display: none;
+    }
+
+    .flip-card-front > p {
+        display: block !important; */
+
+}
 
 @media screen and (min-width: 650px){
     .all_flags{
@@ -500,64 +539,17 @@ input[type=submit] {
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
-    /* .theme-switch {
-        display: inline-block;
-        height: 34px;
-        position: relative;
-        width: 60px;
-      }
-      
-      .theme-switch-wrapper{
+
+    .gallery img{
+        width: 200px;
+        height: 350px;
+    }
+
+    .gallery{
         display: flex;
-        align-items: center;
-      }
-
-      .theme-switch-wrapper em{
-          margin-right: 10px;
-      }
-
-      .theme-switch input {
-        display:none;
-      }
-      
-      .slider {
-        background-color: #ccc;
-        bottom: 0;
-        cursor: pointer;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: .4s;
-      }
-      
-      .slider:before {
-        background-color: #fff;
-        bottom: 4px;
-        content: "";
-        height: 26px;
-        left: 4px;
-        position: absolute;
-        transition: .4s;
-        width: 26px;
-      }
-      
-      input:checked + .slider {
-        background-color: #66bb6a;
-      }
-      
-      input:checked + .slider:before {
-        transform: translateX(26px);
-      }
-      
-      .slider.round {
-        border-radius: 34px;
-      }
-      
-      .slider.round:before {
-        border-radius: 50%;
-      } */
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
 }
 
@@ -577,8 +569,9 @@ input[type=submit] {
 
     .gallery{
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;  
+        flex-direction: row;
+        overflow: auto;
+        flex-wrap: nowrap;
     }
 
     .all_flags{
@@ -628,7 +621,7 @@ input[type=submit] {
         background-color: #3700B3;
     }
 
-    .formwrap, .calendar, .countdown-style{
+    .formwrap, .calendar, .countdown-style, .flip-card-back{
         background-color: #3700B3;
     }
 

@@ -59,17 +59,17 @@
                 <fieldset>
                 <legend>Leave me a message!</legend>
             
-                <label for="hometown_id">Email</label>
-                <input type="email" placeholder="Enter your email" id = "email_id" name="email" required><br>
+                <label for="email_id">Email</label>
+                <input type="text" placeholder="Enter your email" name="email" id = "email_id" required><br>
             
                 <label for="phone_id">Phone Number</label>
-                <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                <input type="tel"  placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id = "phone_id" required><br>
 
 				<label for="pronouns_id">Pronouns</label>
-                <textarea placeholder="Enter your pronouns if you want!" id = "pronouns" name="mesg"></textarea><br>
+                <textarea placeholder="Enter your pronouns if you want!" name="pronouns" id = "pronouns_id" ></textarea><br>
          
                 <label for="comments">Additional Comments</label>
-                <textarea placeholder="Enter your message" id = "comments" name="mesg" required></textarea><br>
+                <textarea placeholder="Enter your message" name="mesg" id = "comments"  required></textarea><br>
             
                 <input type="submit" value = "Contact Me">
               </fieldset>
@@ -80,24 +80,26 @@
     
 	<div class = "containercalendar">
 		<div class = "calendar">
-			<h3>Events Coming Up</h3>
+			<h2>Events Coming Up</h2>
 			<iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=AGENDA&src=Y18yM3BnOXRzazkyOXNkMTdzdmMwdmQ1Nm43a0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB" style="border-width:0" width="800"
-		height="300" frameborder="0" scrolling="no"></iframe>
+		height="300" frameborder="0" scrolling="no" aria-label="Google Calendar" tabindex="0"></iframe>
 		</div>
 	</div>
 	
 
 	</main>
 
-    <footer>
+	<footer>
 		<footer-end>
 			<p>Made with love by Alan Yang </p>
 		</footer-end>
 		<div class = "icons">
-			<a href="https://www.linkedin.com/in/yang-alan/" class="fa-brands fa-linkedin"></a>
-			<a href="https://www.instagram.com/alansgraphics/" class="fa-brands fa-instagram"></a>
-			<a href="https://open.spotify.com/playlist/1tUbye7CzDSrUe9zwl8Azh?si=f34829fa9c324e10" class="fa-brands fa-spotify"></a>
+			<a href="https://www.linkedin.com/in/yang-alan/" class="fa-brands fa-linkedin" aria-label="Linkedin Button"></a>
+			<a href="https://www.instagram.com/alansgraphics/" class="fa-brands fa-instagram" aria-label="Instagram Button"></a>
+			<a href="https://open.spotify.com/playlist/1tUbye7CzDSrUe9zwl8Azh?si=f34829fa9c324e10" aria-label="Spotify Button" class="fa-brands fa-spotify"></a>
 		</div>
+		
 	</footer>
+
 </body>
 </html>
